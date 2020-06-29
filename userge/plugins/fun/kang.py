@@ -56,7 +56,7 @@ async def kang_(message: Message):
         photo = await userge.download_media(message=replied,
                                             file_name=Config.DOWN_PATH)
     else:
-        await message.edit("`I can't kang that...`")
+        await message.edit("`Gabisa di kunyah anying`")
         return
     if photo:
         args = message.input_str.split()
@@ -125,9 +125,9 @@ async def kang_(message: Message):
                         await conv.send_message(packname)
                         await conv.get_response(mark_read=True)
                         await message.edit(
-                            f"`Sticker added in a Different Pack !\n"
-                            "This Pack is Newly created!\n"
-                            f"Your pack can be found [here](t.me/addstickers/{packname})")
+                            f"`Pindah tempat !\n"
+                            "Kenyang\n"
+                            f"Sini [LIAT](t.me/addstickers/{packname})")
                         return
                 await conv.send_document(photo)
                 rsp = await conv.get_response(mark_read=True)
@@ -167,8 +167,8 @@ async def kang_(message: Message):
                 await conv.get_response(mark_read=True)
                 await conv.send_message(packname)
                 await conv.get_response(mark_read=True)
-        await message.edit(f"`Sticker kanged successfully!`\n"
-                           f"Pack can be found [here](t.me/addstickers/{packname})")
+        await message.edit(f"`kenyang...`\n"
+                           f" [Kesini](t.me/addstickers/{packname})")
         os.remove(photo)
 
 
@@ -234,13 +234,13 @@ def resize_photo(photo: str) -> str:
 
 
 KANGING_STR = (
-    "Using Witchery to kang this sticker...",
-    "Plagiarising hehe...",
-    "Inviting this sticker over to my pack...",
-    "Kanging this sticker...",
-    "Hey that's a nice sticker!\nMind if I kang?!..",
-    "hehe me stel ur stikér\nhehe.",
-    "Ay look over there (☉｡☉)!→\nWhile I kang this...",
+    "Liat bentar...",
+    "Ini sticker yak?",
+    "Ijigg",
+    "Kok bagus",
+    "Bentar\nNyobain..",
+    "Bentar gua bawa kang potokopi",
+    "Sini",
     "Roses are red violets are blue, kanging this sticker so my pacc looks cool",
-    "Imprisoning this sticker...",
-    "Mr.Steal Your Sticker is stealing this sticker... ")
+    "Misii",
+    "Misi ada sweeper")
